@@ -7,7 +7,7 @@ function Home() {
             <div className="-z-10 absolute -ml-20 -mt-96">
                 <PawPrint
                     fill="#C897E626"
-                    className="scale-90 rotate-45"
+                    className="scale-90 rotate-30"
                 />
             </div>
             <div className="z-5">

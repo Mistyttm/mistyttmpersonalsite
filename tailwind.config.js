@@ -5,10 +5,15 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                bagel: [
-                    '"Bagel Fat One"',
-                    "cursive",
-                ],
+                bagel: ['"Bagel Fat One"', "cursive"],
+            },
+            rotate: {
+                30: "30deg",
+            },
+            scale: {
+                25: ".25",
+                15: ".15",
+                10: ".10",
             },
         },
     },
