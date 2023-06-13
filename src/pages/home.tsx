@@ -1,4 +1,3 @@
-import React from "react";
 import NavbarHome from "../components/navbar-home";
 import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized.svg";
 
