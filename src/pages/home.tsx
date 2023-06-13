@@ -4,11 +4,13 @@ import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized
 function Home() {
     return (
         <div>
-            <PawPrint
-                fill="#C897E626"
-                className="z-0 absolute scale-90 rotate-45 -ml-20 -mt-96"
-            />
-            <div className="z-1">
+            <div className="-z-10 absolute -ml-20 -mt-96">
+                <PawPrint
+                    fill="#C897E626"
+                    className="scale-90 rotate-45"
+                />
+            </div>
+            <div className="z-5">
                 <NavbarHome />
                 <div className="flex flex-col">
                     <img
