@@ -1,7 +1,11 @@
 import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized.svg";
+import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
 
 export default function Blog() {
+    useEffect(() => {
+        document.title = "Blog - Misty Rose";
+    }, []);
     return (
         <div className="mx-auto overflow-clip">
             <div className="overflow-clip -z-10 absolute right-0 mt-20 -mr-40">

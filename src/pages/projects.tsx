@@ -1,7 +1,11 @@
 import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized.svg";
+import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
 
 export default function Projects() {
+    useEffect(() => {
+        document.title = "Projects - Misty Rose";
+    }, []);
     return (
         <div className="mx-auto">
             <div className="overflow-hidden -z-10 absolute left-0 mt-20 -ml-40">
