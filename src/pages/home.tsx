@@ -1,6 +1,6 @@
 import NavbarHome from "../components/navbar-home";
 import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized.svg";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 function Home() {
     useEffect(() => {
