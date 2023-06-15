@@ -6,6 +6,7 @@ import Blog from "./pages/blog";
 import Projects from "./pages/projects";
 import Contact from "./pages/contact";
 import Error from "./pages/404";
+import Article from "./pages/article";
 
 function App() {
     return (
@@ -16,7 +17,8 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<Error />} />
+                <Route path="*" element={<Error location="/" place="home" />} />
+                <Route path="/blog/article" element={<Article />} />
             </Routes>
         </BrowserRouter>
     );

@@ -3,7 +3,7 @@ import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized
 import { useEffect } from "react";
 import Navbar from "../components/navbar";
 
-export default function Error() {
+export default function Error(props: { location: string, place: string }) {
     useEffect(() => {
         document.title = "404 - Misty Rose";
     }, []);
@@ -20,7 +20,7 @@ export default function Error() {
                 <section className="font-bagel text-center text-7xl max-w-3xl ml-auto mr-auto">
                     <p className="my-10">Woof!</p>
                     <p className="mb-16">You're in the wrong spot 🐶</p>
-                    <Link to="/" className="text-amber-700 underline transition-colors duration-300 ease-in-out hover:text-zinc-500">Go back home</Link>
+                    <Link to={props.location} className="text-amber-700 underline transition-colors duration-300 ease-in-out hover:text-zinc-500">Go back {props.place}</Link>
                 </section>
             </div>
         </div>
