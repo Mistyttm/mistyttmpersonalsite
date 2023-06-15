@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Navbar from "../components/navbar";
 import { useSearchParams } from "react-router-dom";
 import Error from "./404";
+import ReactMarkdown from 'react-markdown'
 
 export default function Blog() {
     useEffect(() => {
