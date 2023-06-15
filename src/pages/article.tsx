@@ -1,23 +1,31 @@
 import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized.svg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/navbar";
 import { useSearchParams } from "react-router-dom";
 import Error from "./404";
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { ghcolors } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-export default function Blog() {
+export default function Article() {
+    const [searchParams] = useSearchParams();
+    const params = searchParams.get("b");
+    const file_name = `/${params}.md`;
+    const [post, setPost] = useState("");
+
     useEffect(() => {
         document.title = "Blog - Misty Rose";
+        import(file_name).then((res) => {
+            fetch(res.default)
+                .then((response) => response.text())
+                .then((text) => setPost(text))
+                .catch((err) => console.log(err));
+        });
     }, []);
 
-    const [searchParams, setSearchParams] = useSearchParams();
-
-    const params = searchParams.get("b");
-
     if (!params) {
-        return (
-            <Error location="/blog" place="to the blog" />
-        )
+        return <Error location="/blog" place="to the blog" />;
     }
 
     return (
@@ -32,9 +40,58 @@ export default function Blog() {
                 <div className="flex z-5 mb-10">
                     <Navbar />
                 </div>
-                <h1 className="font-bagel text-7xl text-center mb-10">{params}</h1>
-                <section className="text-center text-xl max-w-3xl ml-auto mr-auto">
-                    <p className="">Under construction</p>
+                <section className="text-xl max-w-3xl ml-auto mr-auto text-justify">
+                    <ReactMarkdown
+                        children={post}
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                            h1: ({ ...props }) => (
+                                <h1
+                                    className="font-bagel text-7xl text-center mb-10"
+                                    {...props}
+                                />
+                            ),
+                            h2: ({ ...props }) => (
+                                <h2
+                                    className="font-bagel text-6xl text-center mb-10"
+                                    {...props}
+                                />
+                            ),
+                            h3: ({ ...props }) => (
+                                <h3
+                                    className="font-bagel text-5xl text-center mb-10"
+                                    {...props}
+                                />
+                            ),
+                            blockquote: ({ ...props }) => (
+                                <blockquote
+                                    className="bg-zinc-200 text-2xl italic"
+                                    {...props}
+                                />
+                            ),
+                            code({ inline, className, children, ...props }) {
+                                const match = /language-(\w+)/.exec(
+                                    className || ""
+                                );
+                                return !inline && match ? (
+                                    <SyntaxHighlighter
+                                        {...props}
+                                        children={String(children).replace(
+                                            /\n$/,
+                                            ""
+                                        )}
+                                        style={ghcolors}
+                                        language={match[1]}
+                                        PreTag="div"
+                                    />
+                                ) : (
+                                    <code {...props} className={className}>
+                                        {children}
+                                    </code>
+                                );
+                            },
+                        }}
+                    />
                 </section>
             </div>
         </div>

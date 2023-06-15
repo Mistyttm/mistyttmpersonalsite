@@ -18,7 +18,7 @@ export default function Article() {
                 </div>
                 <h1 className="font-bagel text-7xl text-center mb-10">Blog</h1>
                 <section className="text-center text-xl max-w-3xl ml-auto mr-auto">
-                    <Link to="/blog/article?b=12">Tester</Link>
+                    <Link to="/blog/article?b=15062023_1010">Tester</Link>
                 </section>
             </div>
         </div>
