@@ -1,5 +1,5 @@
 # Misty Rose!
-The code source for my personal website built with react and vite, hosted on vercel
+The code source for my personal website built with react and vite, hosted on vercel. Hopefully I will have a domain soon
 
 ## Home Page
 ![Home page](home_page.png)
