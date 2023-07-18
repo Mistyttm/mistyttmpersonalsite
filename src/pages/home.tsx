@@ -25,7 +25,7 @@ function Home() {
                             className="scale-50 justify-self-center -mt-10 -mb-20"
                         />
                     </div>
-                    <div data-aos="fade-up">
+                    <div data-aos="fade-up" data-aos-delay="250">
                         <h3 className="font-bagel text-4xl text-center">
                             Puppy Programmer Girl
                         </h3>
