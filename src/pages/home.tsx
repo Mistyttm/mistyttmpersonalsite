@@ -15,18 +15,19 @@ function Home() {
             <div className="-z-10 absolute -ml-20 -mt-96">
                 <PawPrint fill="#C897E626" className="scale-90 rotate-30" />
             </div>
+            <NavbarHome />
             <div className="z-5">
-                <NavbarHome />
+                
                 <div className="flex flex-col">
                     <div data-aos="fade-up">
                         <img
                             src="/hero_logo.png"
                             alt="Misty Rose! logo"
-                            className="scale-50 justify-self-center -mt-10 -mb-20"
+                            className="w-auto h-20 sm:h-32 md:h-40 xl:h-60  ml-auto mr-auto mt-16 z-10"
                         />
                     </div>
                     <div data-aos="fade-up" data-aos-delay="250">
-                        <h3 className="font-bagel text-4xl text-center">
+                        <h3 className="font-bagel text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
                             Puppy Programmer Girl
                         </h3>
                     </div>
