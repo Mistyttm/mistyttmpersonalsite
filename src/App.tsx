@@ -10,17 +10,22 @@ import Article from "./pages/article";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<Error location="/" place="home" />} />
-                <Route path="/blog/article" element={<Article />} />
-            </Routes>
-        </BrowserRouter>
+        <div className="mobile-overflow-fix">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route
+                        path="*"
+                        element={<Error location="/" place="home" />}
+                    />
+                    <Route path="/blog/article" element={<Article />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
     );
 }
 
