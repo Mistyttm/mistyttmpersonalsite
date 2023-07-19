@@ -14,7 +14,7 @@ function Home() {
         <div>
             <PawPrint
                 fill="#C897E626"
-                className="-z-10 absolute -ml-80 -mt-[30rem] sm:-ml-60 sm:-mt-96 md:-ml-40 scale-50 sm:scale-75 md:scale-90 rotate-30"
+                className="-z-10 absolute -ml-80 -mt-[30rem] sm:-ml-60 sm:-mt-96 md:-ml-40 scale-50 sm:scale-75 md:scale-90 rotate-45"
             />
             <NavbarHome />
             <div className="z-5">

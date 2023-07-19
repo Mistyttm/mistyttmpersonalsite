@@ -9,6 +9,8 @@ export default {
             },
             rotate: {
                 30: "30deg",
+                40: "40deg",
+                50: "50deg",
             },
             scale: {
                 100: "1",
