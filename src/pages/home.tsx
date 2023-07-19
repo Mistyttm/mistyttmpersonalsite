@@ -12,12 +12,14 @@ function Home() {
     }, []);
     return (
         <div>
-            <div className="-z-10 absolute -ml-20 -mt-96">
-                <PawPrint fill="#C897E626" className="scale-90 rotate-30" />
+            <div className="-z-10 absolute -ml-60 -mt-[30rem] sm:-ml-40 sm:-mt-96 md:-ml-20">
+                <PawPrint
+                    fill="#C897E626"
+                    className="scale-50 sm:scale-75 md:scale-90 rotate-30"
+                />
             </div>
             <NavbarHome />
             <div className="z-5">
-                
                 <div className="flex flex-col">
                     <div data-aos="fade-up">
                         <img
