@@ -1,4 +1,4 @@
-import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized.svg";
+import { ReactComponent as PawPrint } from "../assets/images/Untitled.svg";
 import { useEffect } from "react";
 import Navbar from "../components/navbar";
 
@@ -8,8 +8,8 @@ export default function About() {
     }, []);
     return (
         <div className="mx-auto overflow-scroll">
-            <div className="overflow-hidden -z-10 absolute top-0 right-0 -mr-20 -mt-80">
-                <PawPrint fill="#C897E626" className="scale-90 -rotate-30" />
+            <div>
+                <PawPrint fill="#C897E626" className="-z-10 absolute bottom-0 right-0 w-80 h-auto md:w-1/3 -rotate-45" />
             </div>
             <div className="flex flex-col justify-center place-content-center ">
                 <div className="flex z-5 mb-10">
