@@ -9,7 +9,7 @@ export default function About() {
     return (
         <div className="mx-auto overflow-scroll">
             <div>
-                <PawPrint fill="#C897E626" className="-z-10 absolute bottom-0 right-0 w-80 h-auto md:w-1/3 -rotate-45" />
+                <PawPrint fill="#C897E626" className="-z-10 absolute bottom-0 right-20 w-80 h-auto md:w-1/3 -rotate-45" />
             </div>
             <div className="flex flex-col justify-center place-content-center ">
                 <div className="flex z-5 mb-10">
