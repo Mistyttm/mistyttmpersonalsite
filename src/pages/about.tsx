@@ -9,7 +9,10 @@ export default function About() {
     return (
         <div className="mx-auto overflow-scroll">
             <div>
-                <PawPrint fill="#C897E626" className="-z-10 absolute bottom-0 right-16 w-80 h-auto md:w-1/3 -rotate-45" />
+                <PawPrint
+                    fill="#C897E626"
+                    className="-z-10 absolute bottom-0 right-16 w-80 h-auto md:w-1/3 -rotate-45"
+                />
             </div>
             <div className="flex flex-col justify-center place-content-center ">
                 <div className="flex z-5 mb-10">
@@ -18,7 +21,7 @@ export default function About() {
                 <h1 className="font-bagel text-7xl text-center mb-10">
                     About Me
                 </h1>
-                <section className="text-center text-xl max-w-3xl ml-20 mr-20 min-[800px]:ml-auto min-[800px]:mr-auto">
+                <section className="text-center text-xl max-w-3xl pb-16 ml-20 mr-20 min-[800px]:ml-auto min-[800px]:mr-auto">
                     <p className="mb-4">
                         Hi there 🐶!!!! My name is Emmey Leo, 19. Online I go by
                         the moniker of Misty Rose. I'm a currently enrolled 2nd
@@ -48,8 +51,7 @@ export default function About() {
                     <p>
                         I am currently looking for work as a junior developer or
                         technician with my experience in windows 7, 10 and 11,
-                        Apple's software, as well as some experience using Linux
-                        environments.
+                        Apple's software, as well as experience with Linux.
                     </p>
                 </section>
             </div>
