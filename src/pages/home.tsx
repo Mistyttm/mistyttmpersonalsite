@@ -23,7 +23,7 @@ function Home() {
                         <img
                             src="/hero_logo.png"
                             alt="Misty Rose! logo"
-                            className="w-auto h-20 sm:h-32 md:h-40 xl:h-60  ml-auto mr-auto mt-16 z-10"
+                            className="w-auto h-16 sm:h-32 md:h-40 xl:h-60  ml-auto mr-auto mt-16 z-10"
                         />
                     </div>
                     <div data-aos="fade-up" data-aos-delay="250">
