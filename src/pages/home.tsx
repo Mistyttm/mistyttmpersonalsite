@@ -1,5 +1,5 @@
 import NavbarHome from "../components/navbar-home";
-import { ReactComponent as PawPrint } from "../assets/images/Paw_Print_optimized.svg";
+import { ReactComponent as PawPrint } from "../assets/images/Untitled.svg";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -14,7 +14,7 @@ function Home() {
         <div>
             <PawPrint
                 fill="#C897E626"
-                className="-z-10 absolute -ml-80 -mt-[30rem] sm:-ml-60 sm:-mt-96 md:-ml-40 scale-50 sm:scale-75 md:scale-90 rotate-45"
+                className="-z-10 absolute -top-5 -left-16 w-80 h-auto md:w-1/3 rotate-45"
             />
             <NavbarHome />
             <div className="z-5">
